@@ -148,9 +148,6 @@ async function getAll(options) {
       ],
     };
   }
-
-  console.log(queryParams);
-
   const properties = await db.Property.findAll({
     queryParams,
     include: [

@@ -43,15 +43,13 @@ function start(_App, port) {
 
   app.enable('trust proxy');
   app.set('trust proxy', '127.0.0.1');
-
+  app.use(errorMiddleware);
   // loading app
   app.use('/api/v1', API(_App));
   app.use('/api', notFoundMiddleware);
   app.all('*', (req, res, next) => {
     next(new NotFoundError(`Can't find ${req.originalUrl} on this server!`));
   });
-
-  app.use(errorMiddleware);
 
   // initialize a simple http server
   const server = http.createServer(app);

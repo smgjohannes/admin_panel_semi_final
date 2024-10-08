@@ -25,7 +25,6 @@ const DEFAULT_OPTIONS = {
     'sitting_rooms',
     'land_size',
     'outside_building',
-    'outside_flat',
     'monthly_rates',
     'monthly_levy',
     'category',
