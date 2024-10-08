@@ -162,7 +162,7 @@ function getRoutes(app) {
     );
 
   // PROPERTY ROUTES
-  router.route('/properties/all').get(propertyController.getAll);
+  router.route('/properties/all').getAll(propertyController.getAll);
 
   router
     .route('/properties')
